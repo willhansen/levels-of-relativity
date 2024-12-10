@@ -1,10 +1,11 @@
 [package]
 name = "levels_of_relativity"
 version = "0.0.0"
-edition.workspace = true
+edition = '2021'
+author = "Will Hansen"
 
 [dependencies]
 typenum = "1.17.0"
 trybuild = "1.0"
-num.workspace = true
-derive_more.workspace = true
+num = "0.4"
+derive_more = "0.99.17"
