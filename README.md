@@ -1,21 +1,18 @@
-:source-highlighter: rouge
-
 # Levels of Relativity
 
 ## Motivation 
 
-A point minus a point is a vector, and there are geometry libraries that can statically enforce this by having different vector and point types (eg https://docs.rs/euclid/latest/euclid/[euclid]), but what about when you want to statically enforce the next subtraction step as well?
+A point minus a point is a vector, and there are geometry libraries that can statically enforce this by having different vector and point types (eg [euclid](https://docs.rs/euclid/latest/euclid/)), but what about when you want to statically enforce the next subtraction step as well?
 
 With derivatives, the units change:
 
-- \(L -> m\)
-- \( \frac{dL}{dt} -> \frac{m}{s}\)
-- \( \frac{d^2L}{dt^2} -> \frac{m}{s^2}\)
+- $L -> m$
+- $ \frac{dL}{dt} -> \frac{m}{s}$
+- $ \frac{d^2L}{dt^2} -> \frac{m}{s^2}$
 
 If you're modelling a position moving with some acceleration, using constant time steps, you'll be dealing with all of these.
 
-[source, rust]
----
+```rust
 
 let tick_length_in_seconds: f32 = 0.001;
 
@@ -39,13 +36,14 @@ for x in 0..20 {
 
 print!(x, dx, ddx);
 
----
+```
 
-In this example, all three of `x`, `dx`, and `ddx` have the same dimension and unit (length, and meters).  Static dimensional analysis (as with the https://docs.rs/uom/latest/uom/[Units of Measure crate]) would not catch the above typo.
+In this example, all three of `x`, `dx`, and `ddx` have the same dimension and unit (length, and meters).  Static dimensional analysis (as with the [Units of Measure crate](https://docs.rs/uom/latest/uom/)) would not catch the above typo.
 
 ## Solution
 
 These three things are not the same type of thing even if they have the same dimension and unit
+
 - A position
 - A velocity times a duration
 - An acceleration times a duration squared
@@ -59,7 +57,7 @@ Google and other search engines haven't helped, so I'mma call it "Level of Relat
 
 ### Notation
 
-ThingWithRelativity<ContentsType, Level>(contents) ==> T<Level>(contents)
+`ThingWithRelativity<ContentsType, Level>(contents) ==> T<Level>(contents)`
 
 A position of 5 meters would be `T<Level=0>(5m) == T<L=0>(5m) == T<0>(5m)`
 A displacement of 5 meters would be `T<L=1>(5m)`
@@ -89,21 +87,24 @@ Any other addition or subtraction does not make sense
 
 Bringing back the contents, they just behave like usual
 
-T<N>(C1) - T<N>(C2) == T<N+1>(C1-C2)
-T<N>(C1) +/- T<N+1>(C2) == T<N>(C1 +/- C2)
+`T<N>(C1) - T<N>(C2) == T<N+1>(C1-C2)`
+`T<N>(C1) +/- T<N+1>(C2) == T<N>(C1 +/- C2)`
 
 I have no idea what cross-level multiplication or division would look like (what's a position times a displacement?), so I'll just disallow that.
 This is kind of analogous to how you can't add two values with different units (what's a meter plus a second?).
 
-T<N>(C1) * T<N>(C2) == T<N>(C1 * C2)
+`T<N>(C1) * T<N>(C2) == T<N>(C1 * C2)`
 
 
 ## opt-in behavior
 
 May have another static parameter for allowing opt-in behavior.  eg allowing `ThingWithRelativity<i32, Level=0>::new(5) + 7`
+
 - Assume no relativity implies level of 0, or whatever the other level is (or one higher?)?
 - Maybe an enum for default relativity level?  Options: Same, PlusOne, Zero, Disallow
 
 ## Running tests
+
 `nix develop`
+
 `cargo test --features trybuild/diff`
