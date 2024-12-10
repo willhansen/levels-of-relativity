@@ -6,5 +6,5 @@ error[E0277]: cannot subtract `RelativeTo<RelativeTo<RelativeTo<()>>>` from `Rel
   |
   = help: the trait `Sub<RelativeTo<RelativeTo<RelativeTo<()>>>>` is not implemented for `RelativeTo<()>`
   = help: the following other types implement trait `Sub<Rhs>`:
-            <RelativeTo<R> as Sub<RelativeTo<RelativeTo<R>>>>
-            <RelativeTo<R> as Sub>
+            `RelativeTo<R>` implements `Sub<RelativeTo<RelativeTo<R>>>`
+            `RelativeTo<R>` implements `Sub`

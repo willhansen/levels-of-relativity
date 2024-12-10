@@ -19,3 +19,7 @@ Statically checked
 May have another static parameter for allowing opt-in behavior.  eg allowing `ThingWithRelativity<i32, Level=0>::new(5) + 7`
 - Assume no relativity implies level of 0, or whatever the other level is (or one higher?)?
 - Maybe an enum for default relativity level?  Options: Same, PlusOne, Zero, Disallow
+
+## Running tests
+`nix develop`
+`cargo test --features trybuild/diff`

@@ -6,11 +6,11 @@ error[E0277]: cannot subtract `typenum::bit::B1` from `typenum::uint::UInt<typen
   |
   = help: the trait `Sub<typenum::bit::B1>` is not implemented for `typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B0>`, which is required by `ladder_types::typenum_ladder::LadderRung<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B1>>: Sub<_>`
   = help: the following other types implement trait `Sub<Rhs>`:
-            <typenum::uint::UInt<U, B> as Sub<typenum::bit::B0>>
-            <typenum::uint::UInt<U, typenum::bit::B0> as Sub<typenum::bit::B1>>
-            <typenum::uint::UInt<Ul, Bl> as Sub<Ur>>
-            <typenum::uint::UInt<typenum::uint::UInt<U, B>, typenum::bit::B1> as Sub<typenum::bit::B1>>
-            <typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1> as Sub<typenum::bit::B1>>
+            `typenum::uint::UInt<U, B>` implements `Sub<typenum::bit::B0>`
+            `typenum::uint::UInt<U, typenum::bit::B0>` implements `Sub<typenum::bit::B1>`
+            `typenum::uint::UInt<Ul, Bl>` implements `Sub<Ur>`
+            `typenum::uint::UInt<typenum::uint::UInt<U, B>, typenum::bit::B1>` implements `Sub<typenum::bit::B1>`
+            `typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>` implements `Sub<typenum::bit::B1>`
   = note: required for `typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B0>` to implement `typenum::private::PrivateSub<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B1>>`
   = note: required for `typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B0>` to implement `Sub<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B1>>`
   = note: 1 redundant requirement hidden

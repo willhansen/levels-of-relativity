@@ -5,10 +5,10 @@ error[E0277]: the trait bound `typenum::uint::UTerm: typenum::private::PrivateSu
   |                      ^ the trait `typenum::private::PrivateSub<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>>` is not implemented for `typenum::uint::UTerm`, which is required by `ladder_types::typenum_ladder::LadderRung<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B1>>: Sub<_>`
   |
   = help: the following other types implement trait `typenum::private::PrivateSub<Rhs>`:
-            <typenum::uint::UInt<Ul, typenum::bit::B0> as typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B0>>>
-            <typenum::uint::UInt<Ul, typenum::bit::B0> as typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B1>>>
-            <typenum::uint::UInt<Ul, typenum::bit::B1> as typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B0>>>
-            <typenum::uint::UInt<Ul, typenum::bit::B1> as typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B1>>>
+            `typenum::uint::UInt<Ul, typenum::bit::B0>` implements `typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B0>>`
+            `typenum::uint::UInt<Ul, typenum::bit::B0>` implements `typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B1>>`
+            `typenum::uint::UInt<Ul, typenum::bit::B1>` implements `typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B0>>`
+            `typenum::uint::UInt<Ul, typenum::bit::B1>` implements `typenum::private::PrivateSub<typenum::uint::UInt<Ur, typenum::bit::B1>>`
   = note: required for `typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>` to implement `typenum::private::PrivateSub<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B1>>`
   = note: required for `typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>` to implement `Sub<typenum::uint::UInt<typenum::uint::UInt<typenum::uint::UTerm, typenum::bit::B1>, typenum::bit::B1>>`
   = note: 1 redundant requirement hidden

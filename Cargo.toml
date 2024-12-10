@@ -1,5 +1,5 @@
 [package]
-name = "levels_of_relativity"
+name = "ladder_types"
 version = "0.0.0"
 edition = '2021'
 author = "Will Hansen"
