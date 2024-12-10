@@ -59,9 +59,9 @@ Google and other search engines haven't helped, so I'mma call it "Level of Relat
 
 `ThingWithRelativity<ContentsType, Level>(contents) ==> T<Level>(contents)`
 
-A position of 5 meters would be `T<Level=0>(5m) == T<L=0>(5m) == T<0>(5m)`
-A displacement of 5 meters would be `T<L=1>(5m)`
-Next would be `T<L=2>(5m)`
+- A position of 5 meters would be `T<Level=0>(5m) == T<L=0>(5m) == T<0>(5m)`
+- A displacement of 5 meters would be `T<L=1>(5m)`
+- Next would be `T<L=2>(5m)`
 
 ## Specifics
 
