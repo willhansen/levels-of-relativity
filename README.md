@@ -6,9 +6,9 @@ A point minus a point is a vector, and there are geometry libraries that can sta
 
 With derivatives, the units change:
 
-- $L -> m$
-- $ \frac{dL}{dt} -> \frac{m}{s}$
-- $ \frac{d^2L}{dt^2} -> \frac{m}{s^2}$
+- $L \longrightarrow m$
+- $\frac{dL}{dt} \longrightarrow \frac{m}{s}$
+- $\frac{d^2L}{dt^2} \longrightarrow \frac{m}{s^2}$
 
 If you're modelling a position moving with some acceleration, using constant time steps, you'll be dealing with all of these.
 
