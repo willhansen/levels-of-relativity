@@ -71,34 +71,30 @@ Ignoring the contents for now.
 
 Difference makes something more relative.  Like position to displacement
 
-`T<0> - T<0> == T<1>`
-
-`T<1> - T<1> == T<2>`
-
-`T<N> - T<N> == T<N+1>`
+- `T<0> - T<0> == T<1>`
+- `T<1> - T<1> == T<2>`
+- `T<N> - T<N> == T<N+1>`
 
 You can add or subtract a displacement to a position.  This generalizes
 
-`T<0> +/- T<1> == T<0>`
-
-`T<N> +/- T<N+1> == T<0>`
+- `T<0> +/- T<1> == T<0>`
+- `T<N> +/- T<N+1> == T<0>`
 
 Any other addition or subtraction does not make sense
 
-`T<N> + T<M>, where N!=M ==> INVALID`
-
-`T<N> - T<M>, where N!=M and N!=M+1 ==> INVALID`
+- `T<N> + T<M>, where N!=M ==> INVALID`
+- `T<N> - T<M>, where N!=M and N!=M+1 ==> INVALID`
 
 Bringing back the contents, they just behave like usual
 
-`T<N>(C1) - T<N>(C2) == T<N+1>(C1-C2)`
-
-`T<N>(C1) +/- T<N+1>(C2) == T<N>(C1 +/- C2)`
+- `T<N>(C1) - T<N>(C2) == T<N+1>(C1-C2)`
+- `T<N>(C1) +/- T<N+1>(C2) == T<N>(C1 +/- C2)`
 
 I have no idea what cross-level multiplication or division would look like (what's a position times a displacement?), so I'll just disallow that.
+
 This is kind of analogous to how you can't add two values with different units (what's a meter plus a second?).
 
-`T<N>(C1) * T<N>(C2) == T<N>(C1 * C2)`
+- `T<N>(C1) * T<N>(C2) == T<N>(C1 * C2)`
 
 
 ## opt-in behavior
