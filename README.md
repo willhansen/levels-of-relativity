@@ -48,7 +48,6 @@ These three things are not the same type of thing even if they have the same dim
 - A velocity times a duration
 - An acceleration times a duration squared
 
-
 A difference between two positions is not a position.  It is a displacement.
 
 A difference between two displacements is not a displacement.  I don't know what it's called, but I can see a pattern here, and that's enough to statically check against.
@@ -62,6 +61,47 @@ Google and other search engines haven't helped, so I'mma call it "Level of Relat
 - A position of 5 meters would be `T<Level=0>(5m) == T<L=0>(5m) == T<0>(5m)`
 - A displacement of 5 meters would be `T<L=1>(5m)`
 - Next would be `T<L=2>(5m)`
+
+### Example with Position
+<table><thead>
+  <tr>
+    <th>Level of Relativity</th>
+    <th>Name</th>
+    <th>From Derivative and Multiplication</th>
+    <th>From Difference</th>
+    <th>Notation</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>0</td>
+    <td>Position</td>
+    <td>$\textemdash$</td>
+    <td>$\textemdash$</td>
+    <td><code>ThingWithRelativity&lt;Level=0&gt;(value)</code></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Displacement</td>
+    <td>$Velocity * time$</td>
+    <td>$Position - Position$</td>
+    <td><code>ThingWithRelativity&lt;Level=1&gt;(value)</code></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>$???$</td>
+    <td>$Acceleration * time^2$</td>
+    <td>$Displacement - Displacement$</td>
+    <td><code>ThingWithRelativity&lt;Level=2&gt;(value)</code></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>$????$</td>
+    <td>$\frac{d^3x}{dt^3} * time^3$</td>
+    <td>$??? - ???$</td>
+    <td><code>ThingWithRelativity&lt;Level=3&gt;(value)</code></td>
+  </tr>
+</tbody>
+</table>
 
 ## Specifics
 
