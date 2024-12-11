@@ -82,21 +82,21 @@ Google and other search engines haven't helped, so I'mma call it "Level of Relat
   <tr>
     <td>1</td>
     <td>Displacement</td>
-    <td>$Velocity * time$</td>
-    <td>$Position - Position$</td>
+    <td>$\text{Velocity} * \text{time}$</td>
+    <td>$\text{Position} - \text{Position}$</td>
     <td><code>ThingWithRelativity&lt;Level=1&gt;(value)</code></td>
   </tr>
   <tr>
     <td>2</td>
     <td>$???$</td>
-    <td>$Acceleration * time^2$</td>
-    <td>$Displacement - Displacement$</td>
+    <td>$\text{Acceleration} * \text{time}^2$</td>
+    <td>$\text{Displacement} - \text{Displacement}$</td>
     <td><code>ThingWithRelativity&lt;Level=2&gt;(value)</code></td>
   </tr>
   <tr>
     <td>3</td>
     <td>$????$</td>
-    <td>$\frac{d^3x}{dt^3} * time^3$</td>
+    <td>$\frac{d^3x}{dt^3} * \text{time}^3$</td>
     <td>$??? - ???$</td>
     <td><code>ThingWithRelativity&lt;Level=3&gt;(value)</code></td>
   </tr>
