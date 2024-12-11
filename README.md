@@ -10,7 +10,7 @@ With derivatives, the units change:
 - $\frac{dL}{dt} \longrightarrow \frac{m}{s}$
 - $\frac{d^2L}{dt^2} \longrightarrow \frac{m}{s^2}$
 
-If you're modelling a position moving with some acceleration, using constant time steps, you'll be dealing with all of these.
+If you're modelling a position changing with some velocity and acceleration, using constant time steps, you'll be dealing with all of these.
 
 ```rust
 
